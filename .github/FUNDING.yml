@@ -1,0 +1,41 @@
+# FUNDING.YML
+# Hey du da, ja genau DU! Schön, dass du hier bist.
+# Dieses Projekt wird mit viel Liebe, Kaffee und gelegentlichen Wutanfällen entwickelt.
+# Wenn du uns unterstützen möchtest, damit wir weiterhin Code zaubern (oder zumindest so tun als ob),
+# dann wirf doch einen Blick auf unsere Sponsoring-Möglichkeiten.
+# Jeder Cent hilft – oder zumindest jeder Euro. 😉
+
+github: # Hier könnten bis zu 4 GitHub Sponsors-Benutzernamen stehen, wenn wir welche hätten... oder wenn die Baschding GmbH endlich welche einrichtet!
+
+patreon: # Stell dir vor, hier wäre ein Patreon-Link. Wäre das nicht was? Vielleicht für exklusive Bug-Reports?
+
+open_collective: # Offen für Kollektive... und Kekse. Vor allem Kekse.
+
+ko_fi: # Ein Kaffee würde uns jetzt guttun. Oder zwei. Oder eine ganze Plantage.
+
+tidelift: # Wenn unser Projekt so groß wäre, dass es Tidelift bräuchte, würden wir wahrscheinlich nicht mehr selbst coden. Träumen darf man ja.
+
+community_bridge: # Wir bauen Brücken! Meistens zwischen verschiedenen Code-Versionen. Und manchmal stürzen sie ein.
+
+liberapay: # Freiheit für die Zahlungen! Und für uns mehr Zeit zum Prokrastinieren.
+
+issuehunt: # Jage die Issues! Oder lass andere für dich jagen und bezahle sie dafür. Genial, oder?
+
+lfx_crowdfunding: # Crowdfunding für mehr Features, die dann wieder neue Issues verursachen. Ein Teufelskreis!
+
+polar: # Sind wir cool genug für Polar? Wahrscheinlich eher nicht. Aber hey, hier ist der Platzhalter!
+
+buy_me_a_coffee: # Siehe Ko-fi. Wir sind da nicht wählerisch. Hauptsache Koffein!
+
+thanks_dev: # Ein einfaches "Danke" ist auch schon viel wert. Aber ein "Danke" mit Geld noch mehr!
+
+custom:
+  - url: https://www.baschding-gmbh.de/wir-lieben-code-und-unterstuetzen-nerds # Natürlich nur eine fiktive URL für unseren Hauptsponsor!
+    message: "Unser Hauptsponsor und Grund, warum wir uns überhaupt einen zweiten Monitor leisten können: Die Baschding GmbH! Ehren-Baschdinger!"
+  - url: https://www.paypal.me/deinProjektHier # Ersetz das mit deinem echten PayPal.me Link, falls du einen hast!
+    message: "Für die schnelle Mark zwischendurch. Oder den schnellen Euro. Wir nehmen alles."
+  - message: "Du kannst uns auch einfach eine Pizza bestellen. Frag nach der Adresse! (Nicht wirklich... oder doch?)"
+  - message: "Oder schick uns gute Laune per E-Mail. Das ist unbezahlbar (aber Sponsoring ist besser)."
+
+# Vielen Dank für deine Unterstützung! Ohne dich (und die Baschding GmbH) wäre das hier alles nur halb so lustig (und halb so finanziert).
+# PS: Wenn du Fehler in dieser Datei findest, darfst du sie behalten. Oder uns einen Pull Request schicken. Wie du willst.
