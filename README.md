@@ -90,10 +90,15 @@ Willkommen beim Erweiterten Datei-Organisator! Diese WPF-Anwendung ist dein neue
 ErweiterterDateiOrganisator/
 
 |-- 📦 ErweiterterDateiOrganisator.Core/         (Hier wohnt die Logik & die Datenmodelle)
+
 |   |-- 🧩 Models/                               (FileEntry.cs, Tag.cs, etc.) 
+
 |   |-- ⚙️ Services/                             (IFileSystemService.cs, etc.) 
+
 |   |-- 🗃️ DataAccess/                           (AppDbContext.cs, etc.) 
+
 |   |-- 🛠️ Helpers/                               (HashGenerator.cs, etc.) 
+
 |
 
 |-- 🖥️ ErweiterterDateiOrganisator.Wpf/          (Das WPF UI-Projekt – hier wird's bunt!)
