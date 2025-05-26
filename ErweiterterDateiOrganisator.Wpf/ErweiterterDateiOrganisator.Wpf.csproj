@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Behaviors\EventToCommandBehavior.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Converters\DateTimeToStringConverter.cs" />
@@ -23,7 +24,7 @@
     <Compile Include="Converters\FileSizeToStringConverter.cs" />
     <Compile Include="Converters\InverseBooleanConverter.cs" />
     <Compile Include="Converters\TagColorToBrushConverter.cs" />
-    <Compile Include="Main.cs" />
+    <Compile Include="MainWindow.xaml.cs" />
     <Compile Include="Services\ClipboardService.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\Interfaces\IClipboardService.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Views\SettingsView.xaml.cs" />
     <Compile Include="Views\TagEditorView.xaml.cs" />
     <Compile Include="Views\TagManagementView.xaml.cs" />
+    <Compile Include="App.xaml.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -69,6 +71,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\Brushes.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -111,6 +116,9 @@
     <Page Include="Views\TagManagementView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
   </ItemGroup>
 
 </Project>
