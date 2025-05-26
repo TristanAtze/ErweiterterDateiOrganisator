@@ -6,4 +6,7 @@
         xmlns:local="clr-namespace:ErweiterterDateiOrganisator.Wpf"
         xmlns:Views="clr-namespace:ErweiterterDateiOrganisator.Wpf.Views" x:Class="ErweiterterDateiOrganisator.Wpf.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="652" Width="964"/>
+    
+        Title="MainWindow" Height="652" Width="964">
+    <Views:MainView HorizontalAlignment="Left" Height="523" Margin="47,52,0,0" VerticalAlignment="Top" Width="841"/>
+</Window>
