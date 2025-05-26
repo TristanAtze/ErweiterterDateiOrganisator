@@ -1,243 +1,147 @@
-# Erweiterter Datei-Organisator
-
-## Projektübersicht
 
 Im Folgenden folgt eine Zusammenfassung von den ausführlichen Funktionen/Architektur: https://docs.google.com/document/d/1EgIPbSaFcXhHZJZmkh-ekFLRhzWi9LTVEHl8o-jiyPo/edit?usp=sharing
 
-Der Erweiterte Datei-Organisator ist eine WPF-Anwendung, die entwickelt wurde, um eine umfassende und intuitive Lösung für die Dateiverwaltung zu bieten. Sie geht über traditionelle Datei-Explorer hinaus, indem sie leistungsstarke Funktionen wie Tagging, erweiterte Suche, Metadaten-Management, Batch-Operationen und eine Duplikatssuche integriert. [cite: 1] Das Projekt nutzt das MVVM (Model-View-ViewModel)-Entwurfsmuster für eine klare Trennung von Benutzeroberfläche und Logik, was zu einer besser wartbaren und skalierbaren Anwendung führt. [cite: 43, 44]
+# 🚀 Erweiterter Datei-Organisator 📂
 
-## Hauptfunktionen
+## 🌟 Projektübersicht
 
-### A. Kernfunktionen der Dateiverwaltung [cite: 34]
+Willkommen beim Erweiterten Datei-Organisator! Diese WPF-Anwendung ist dein neuer bester Freund, wenn es um Dateiverwaltung geht. 🤓 Sie ist mehr als nur ein langweiliger Datei-Explorer – sie steckt voller Power-Features wie Tagging, einer Super-Suche, Metadaten-Management, Batch-Operationen und einem cleveren Duplikatfinder. Das Ganze basiert auf dem MVVM (Model-View-ViewModel)-Muster, was bedeutet: sauberer Code, einfache Wartung und eine App, die mit deinen Bedürfnissen wächst. 🏗️
+
+## 🔥 Hauptfunktionen
+
+### A. 🧭 Kernfunktionen der Dateiverwaltung
 * **Intuitive Navigation:**
-    * Adressleiste mit Pfadeingabe und Breadcrumb-Navigation. [cite: 1]
-    * Vorwärts-, Rückwärts- und "Nach oben"-Schaltflächen. [cite: 2]
-    * Favoriten/Lesezeichen für häufig besuchte Ordner. [cite: 2]
-    * Optionale Unterstützung für mehrere Tabs für paralleles Browsen. [cite: 2]
+    * Adressleiste mit Pfadeingabe & Breadcrumbs. 🗺️
+    * Vorwärts-, Rückwärts- & "Nach oben"-Buttons. ⬆️⬇️⬅️➡️
+    * Favoriten/Lesezeichen für deine Lieblingsordner. ⭐
+    * Optionale Tabs für Multitasking-Ninjas. 탭
 * **Flexible Dateiansicht:**
-    * Detailansicht mit anpassbaren Spalten (Name, Typ, Größe, Datum, Tags etc.) und Sortierung. [cite: 3]
-    * Symbolansicht (klein, mittel, groß). [cite: 4]
-    * Kachelansicht mit Miniaturvorschauen. [cite: 4]
-    * Filterleiste für schnelles Filtern. [cite: 5]
+    * Detailansicht: Spalten anpassen (Name, Typ, Größe, Datum, Tags etc.) & easy sortieren. 📊
+    * Symbolansicht: Klein, mittel, groß – du entscheidest! 🖼️
+    * Kachelansicht: Mit schicken Miniaturvorschauen. 🏞️
+    * Filterleiste: Finde blitzschnell, was du suchst. 🔍
 * **Sichere Dateioperationen:**
-    * Kopieren, Verschieben, Umbenennen, Löschen (mit Papierkorb-Option). [cite: 6]
-    * Fortschrittsdialoge mit Abbruchmöglichkeit und Fehlerbehandlung. [cite: 6]
-    * Konfliktbehandlung (Überschreiben, Umbenennen, Überspringen). [cite: 7]
-    * Erstellen neuer Ordner und leerer Dateien. [cite: 7]
-* **Kontextmenü:** Dynamische Menüs mit relevanten Aktionen für Dateien und Ordner. [cite: 8]
+    * Kopieren, Verschieben, Umbenennen, Löschen (mit Papierkorb-Rettungsnetz 🗑️).
+    * Dialoge mit Fortschrittsanzeige, Abbruchmöglichkeit & Fehlerbehandlung. 🚦
+    * Konfliktlösung (Datei schon da? Überschreiben, Umbenennen, Überspringen). 🤝
+    * Neue Ordner & leere Dateien erstellen. ➕
+* **Kontextmenü:** Dynamische Menüs, die immer die richtigen Aktionen parat haben. 🖱️✨
 
-### B. Tagging-System [cite: 35]
-* **Tag-Erstellung und -Verwaltung:** Hinzufügen, Umbenennen, Löschen von Tags mit optionaler Farbzuweisung. [cite: 9, 10] Zentrale Verwaltungsansicht für alle Tags. [cite: 10]
-* **Tag-Zuweisung:** Einfaches Zuweisen und Entfernen von Tags zu/von Dateien und Ordnern (per Drag & Drop, Kontextmenü, dediziertem Panel). [cite: 11, 12] Autovervollständigung bei der Tag-Eingabe. [cite: 12]
-* **Tag-basierte Navigation und Suche:** "Tag-Explorer"-Bereich und Filtern der aktuellen Ansicht nach Tags (UND/ODER-Logik). [cite: 13]
-* **Speicherung:** Tags werden in einer SQLite-Datenbank gespeichert. [cite: 14]
+### B. 🏷️ Tagging-System
+* **Tag-Erstellung & -Verwaltung:** Neue Tags mit Namen & Farbe erstellen, umbenennen, löschen. 🎨 Plus eine zentrale Übersicht.
+* **Tag-Zuweisung:** Tags easy per Drag & Drop, Kontextmenü oder Panel zuweisen & entfernen. Autovervollständigung inklusive! ✍️
+* **Tag-basierte Navigation & Suche:** Ein "Tag-Explorer" zeigt dir alle Dateien/Ordner zu einem Tag. Filter die aktuelle Ansicht nach einzelnen oder mehreren Tags (UND/ODER). 🧭
+* **Speicherung:** Tags landen sicher in einer SQLite-Datenbank. 💾
 
-### C. Erweiterte Suche & Filterung [cite: 36]
-* **Globale Suchfunktion:** Suche über mehrere Laufwerke/Ordner. [cite: 15]
-* **Kriterien:** Dateiname (mit Wildcards), Dateityp, Dateigröße, Erstellungs-/Änderungsdatum, Tags. [cite: 16]
-* **Optionale Inhaltssuche** für Textdokumente. [cite: 17]
-* **Speicherbare Suchanfragen.** [cite: 18]
-* **Optionale Indizierung** für schnellere Suchen. [cite: 19]
+### C. 🔬 Erweiterte Suche & Filterung
+* **Globale Suchfunktion:** Durchsucht mehrere Laufwerke/Ordner auf einmal. 🌍
+* **Suchkriterien:** Dateiname (mit Wildcards `*`, `?`), Typ (.jpg, .docx), Größe, Datum, Tags.
+* **Optionale Inhaltssuche** für Textdokumente. 📜
+* **Suchanfragen speichern** und später wiederverwenden. 📌
+* **Optionale Indizierung** für Suchen in Lichtgeschwindigkeit. ⚡
 
-### D. Metadaten-Management [cite: 37]
-* **Anzeige:** Dediziertes Panel für Metadaten (EXIF, ID3, Dokumenteigenschaften). [cite: 20, 21]
-* **Optionale Bearbeitung** gängiger Metadatenfelder. [cite: 22]
-* **Extraktion** von Metadaten für Anzeige und Suche. [cite: 23]
+### D. Metadata-Management
+* **Anzeige:** Eigenes Panel für Metadaten (EXIF für Bilder, ID3 für Audio, Dokumentinfos etc.). ℹ️
+* **Optionale Bearbeitung** gängiger Metadatenfelder. ✏️
+* **Extraktion** von Metadaten für Anzeige & Suche. 🔮
 
-### E. Batch-Operationen [cite: 37]
-* **Massen-Umbenennung:** Mit Optionen für Textersetzung, Präfix/Suffix, Nummerierung, Datums-/Uhrzeiteinfügung, Metadaten-Platzhalter und Live-Vorschau. [cite: 24, 25]
-* **Massen-Tagging.** [cite: 37]
-* **Optionale Massen-Metadaten-Bearbeitung.** [cite: 26]
+### E. 🪄 Batch-Operationen
+* **Massen-Umbenennung:** Ein mächtiges Tool mit Textersetzung, Präfix/Suffix, Nummerierung, Datum/Uhrzeit, Metadaten-Platzhaltern & Live-Vorschau. 🔄
+* **Massen-Tagging.** 🏷️🏷️🏷️
+* **Optionale Massen-Metadaten-Bearbeitung.** 🎶
 
-### F. Duplikatfinder [cite: 38]
-* **Kriterien:** Dateiname, Dateigröße, Erstellungs-/Änderungsdatum, Byte-für-Byte-Vergleich, Datei-Hash (MD5, SHA256). [cite: 27]
-* **Ergebnisansicht:** Gruppierte Anzeige von Duplikaten mit Optionen zum Löschen/Verschieben. [cite: 28, 29]
+### F. 👯 Duplikatfinder
+* **Kriterien:** Dateiname, Größe, Datum, Byte-für-Byte-Vergleich (supergenau!), Datei-Hash (MD5, SHA256 – der goldene Mittelweg). ⚖️
+* **Ergebnisansicht:** Duplikate werden gruppiert angezeigt, mit Optionen zum Aufräumen. 🧹
 
-### G. Vorschaufenster [cite: 38]
-* Integriertes Panel für die Vorschau von Bildern (JPG, PNG, GIF, BMP), Textdateien (TXT, MD, LOG etc.), PDFs. [cite: 30, 31]
-* Optional Basisinformationen für andere Typen, Hex-Ansicht. [cite: 30]
+### G. 🖼️ Vorschaufenster
+* Integriertes Panel für die Vorschau von Bildern (JPG, PNG, GIF, BMP), Textdateien (TXT, MD, LOG etc.), PDFs. 📄
+* Optional: Basisinfos für andere Typen, Hex-Ansicht für Nerds. 🤓
 
-### H. Anpassbarkeit und Benutzerfreundlichkeit [cite: 39]
-* **Einstellungen-Dialog:** Konfiguration von Standardpfad, Tag-Farben, Datenbankpfad, Duplikatssuche-Kriterien. [cite: 31]
-* **UI-Themes** (Hell/Dunkel). [cite: 32]
-* **Tastaturkürzel.** [cite: 32]
-* **Optionale Mehrsprachigkeit.** [cite: 33]
+### H. 🛠️ Anpassbarkeit & Benutzerfreundlichkeit
+* **Einstellungen-Dialog:** Standardpfad, Tag-Farben, Datenbankpfad, Duplikatssuche-Kriterien anpassen. ⚙️
+* **UI-Themes** (Hell/Dunkel – Dark Mode rockt!). 🌓
+* **Tastaturkürzel** für schnelle Aktionen. ⌨️
+* **Optionale Mehrsprachigkeit.** 🌐
 
-## Technisches Konzept (Fokus auf WPF)
+## 💡 Technisches Konzept (Fokus auf WPF)
 
-* **Hauptsprache:** C# [cite: 43]
-* **UI-Framework:** WPF (Windows Presentation Foundation) [cite: 43]
-* **.NET-Version:** .NET 8 (oder aktuellste stabile Version) [cite: 43]
+* **Hauptsprache:** C# 💻
+* **UI-Framework:** WPF (Windows Presentation Foundation) ✨
+* **.NET-Version:** .NET 8 (oder die aktuellste stabile Version) 🚀
 * **Kernkonzepte:**
-    * **XAML:** Zur deklarativen Definition der Benutzeroberfläche. [cite: 43]
-    * **MVVM (Model-View-ViewModel):** Primäres Entwurfsmuster. [cite: 44] ViewModels für jede View. [cite: 44]
-    * **Datenbindung:** Intensiver Einsatz zur Verknüpfung von ViewModels mit Views. [cite: 45]
-    * **Commands:** Verwendung von `ICommand` (z.B. RelayCommand aus CommunityToolkit.Mvvm). [cite: 46]
-* **Datenbank für Tags/Metadaten-Index:** SQLite [cite: 47]
-    * **Zugriff:** Entity Framework Core (EF Core) mit SQLite-Provider oder ein Micro-ORM wie Dapper. [cite: 47]
+    * **XAML:** Für die schicke, deklarative UI-Definition. 🎨
+    * **MVVM (Model-View-ViewModel):** Unser Architekturchampion für sauberen Code. 🧱
+    * **Datenbindung:** Verknüpft ViewModels und Views magisch. 🔗
+    * **Commands:** `ICommand` (z.B. RelayCommand aus CommunityToolkit.Mvvm) für Aktionen. ⚡
+* **Datenbank für Tags/Metadaten-Index:** SQLite 💾
+    * **Zugriff:** Entity Framework Core (EF Core) mit SQLite-Provider oder ein flinkes Micro-ORM wie Dapper.
 * **Wichtige Bibliotheken (Beispiele):**
-    * `System.IO`: Für Dateioperationen. [cite: 48]
-    * `CommunityToolkit.Mvvm`: Für MVVM-Basisfunktionalität. [cite: 48]
-    * `Microsoft.EntityFrameworkCore.Sqlite`: Für EF Core mit SQLite. [cite: 49]
-    * `TagLib-Sharp`: Zum Lesen/Schreiben von Metadaten. [cite: 49]
-    * PDF-Viewer-Bibliothek (z.B. basierend auf WebView2, PdfiumViewer.WPF). [cite: 50]
-    * `System.Security.Cryptography`: Für Datei-Hashes. [cite: 51]
-    * Optional: Dependency Injection Framework (z.B. `Microsoft.Extensions.DependencyInjection`). [cite: 51]
-    * Optional: Icon-Bibliotheken (z.B. `MahApps.Metro.IconPacks`). [cite: 51]
+    * `System.IO`: Für Datei-Action. 📂
+    * `CommunityToolkit.Mvvm`: MVVM-Superkräfte! 💪
+    * `Microsoft.EntityFrameworkCore.Sqlite`: EF Core + SQLite = ❤️.
+    * `TagLib-Sharp`: Metadaten lesen & schreiben. 🏷️✏️
+    * PDF-Viewer-Bibliothek (z.B. basierend auf WebView2, PdfiumViewer.WPF). 📄
+    * `System.Security.Cryptography`: Für sichere Datei-Hashes. 🔑
+    * Optional: Dependency Injection Framework (z.B. `Microsoft.Extensions.DependencyInjection`). 💉
+    * Optional: Icon-Bibliotheken (z.B. `MahApps.Metro.IconPacks`) für noch mehr Style. 😎
 
-## Projektstruktur (MVVM-orientiert) [cite: 52]
+## 🏗️ Projektstruktur (MVVM-Style)
+ErweiterterDateiOrganisator/
+|-- 📦 ErweiterterDateiOrganisator.Core/         (Hier wohnt die Logik & die Datenmodelle)
+|   |-- 🧩 Models/                               (FileEntry.cs, Tag.cs, etc.)
+|   |-- ⚙️ Services/                             (IFileSystemService.cs, etc.)
+|   |-- 🗃️ DataAccess/                           (AppDbContext.cs, etc.)
+|   |-- 🛠️ Helpers/                               (HashGenerator.cs, etc.)
+|
+|-- 🖥️ ErweiterterDateiOrganisator.Wpf/          (Das WPF UI-Projekt – hier wird's bunt!)
+|   |-- 🚀 App.xaml / App.xaml.cs                (Startrampe der App, DI-Setup)
+|   |-- 🖼️ Views/                                (XAML-Dateien für Fenster & UserControls)
+|   |   |-- 🏠 MainView.xaml                     (Das Hauptquartier)
+|   |   |-- ⚙️ SettingsView.xaml                 (Der Einstellungs-Hub)
+|   |   |-- 📂 FileExplorerView.xaml             (Die Kommandozentrale für Dateien)
+|   |   |-- 👁️ PreviewPaneView.xaml              (Das Vorschaufenster)
+|   |   |-- 🏷️ TagEditorView.xaml                (Der Tag-Manager)
+|   |   |-- 📄 FileListItemView.xaml             (Ein einzelner Dateieintrag)
+|   |   |-- ... (weitere coole Views)
+|   |
+|   |-- 🧠 ViewModels/                           (Die C#-Gehirne der Präsentation)
+|   |   |-- 🧬 ViewModelBase.cs                  (Die DNA aller ViewModels mit INotifyPropertyChanged)
+|   |   |-- 👑 MainViewModel.cs
+|   |   |-- 🧭 FileExplorerViewModel.cs
+|   |   |-- ✨ FileListItemViewModel.cs          (ViewModel für jeden Dateieintrag)
+|   |   |-- 🖼️ PreviewPaneViewModel.cs
+|   |   |-- 🏷️ TagEditorViewModel.cs
+|   |   |-- ... (weitere schlaue ViewModels)
+|   |
+|   |-- 🎨 Controls/                             (Optionale Custom WPF Controls)
+|   |   |-- 🗺️ PathBreadcrumbBar.cs
+|   |
+|   |-- 🔄 Converters/                           (IValueConverter – die kleinen Helferlein)
+|   |   |-- 🌈 TagColorToBrushConverter.cs
+|   |   |-- ...
+|   |
+|   |-- 📚 Resources/                            (Resource Dictionaries – Schatztruhen für Styles)
+|   |   |-- 🖌️ Styles.xaml                       (Globale & spezifische Control-Styles)
+|   |   |-- 📝 DataTemplates.xaml                (Wie deine Daten aussehen sollen)
+|   |   |-- ...
+|   |
+|   |-- 🛎️ Services/ (UI-spezifische Dienste)
+|   |   |-- 💬 IDialogService.cs / DialogService.cs (Für Dialoge vom ViewModel aus)
+|   |   |-- ...
+|
+|-- ✅ ErweiterterDateiOrganisator.Tests/        (Unit-Test-Projekt – damit alles rund läuft!)
+|   |-- 🧪 Core.Tests/                           (Tests für die Core-Services)
+|   |-- 🧪 Wpf.Tests/                             (Tests für die ViewModels)
+|
+|-- 📜 Solution-Datei (.sln)
 
-ErweiterterDateiOrganisator/  (Root-Verzeichnis der Solution)
-|
-|-- ErweiterterDateiOrganisator.Core/  (Klassenbibliothek: Geschäftslogik, UI-unabhängig)
-|   |
-|   |-- Models/  (Datenmodelle der Anwendung)
-|   |   |-- FileSystemEntry.cs         (Abstrakte Basisklasse für Dateien und Ordner)
-|   |   |-- FileEntry.cs               (Repräsentiert eine Datei, erbt von FileSystemEntry)
-|   |   |-- DirectoryEntry.cs          (Repräsentiert einen Ordner, erbt von FileSystemEntry)
-|   |   |-- Tag.cs                     (Repräsentiert ein Tag)
-|   |   |-- FileTagLink.cs             (Verknüpfungstabelle zwischen FileSystemEntry und Tag)
-|   |   |-- SearchFilterCriteria.cs    (Kriterien für Suchvorgänge)
-|   |   |-- AppConfiguration.cs        (Einstellungen der Anwendung)
-|   |   |-- DuplicateFileGroup.cs      (Gruppe von als Duplikate identifizierten Dateien)
-|   |   |-- MetadataItem.cs            (Repräsentiert ein einzelnes Metadatum Key-Value-Paar)
-|   |
-|   |-- Services/  (Interfaces und Implementierungen der Geschäftslogik)
-|   |   |-- IFileSystemService.cs      (Interface für Datei- und Ordneroperationen)
-|   |   |-- FileSystemService.cs       (Implementierung von IFileSystemService)
-|   |   |-- ITagService.cs             (Interface für Tag-Management)
-|   |   |-- TagService.cs              (Implementierung von ITagService)
-|   |   |-- ISearchService.cs          (Interface für Suchfunktionen)
-|   |   |-- SearchService.cs           (Implementierung von ISearchService)
-|   |   |-- IMetadataService.cs        (Interface für das Lesen/Schreiben von Metadaten)
-|   |   |-- MetadataService.cs         (Implementierung von IMetadataService)
-|   |   |-- IDuplicateFinderService.cs (Interface für die Duplikatssuche)
-|   |   |-- DuplicateFinderService.cs  (Implementierung von IDuplicateFinderService)
-|   |   |-- IConfigurationService.cs   (Interface zum Laden/Speichern von Einstellungen)
-|   |   |-- ConfigurationService.cs    (Implementierung von IConfigurationService)
-|   |
-|   |-- DataAccess/  (Datenzugriffsschicht)
-|   |   |-- AppDbContext.cs            (EF Core DbContext für die SQLite-Datenbank)
-|   |   |--DesignTimeDbContextFactory.cs (Für EF Core Migrationen zur Designzeit)
-|   |   |-- IRepository.cs             (Optional: Generisches Repository-Interface)
-|   |   |-- EfRepository.cs            (Optional: EF Core Implementierung von IRepository)
-|   |
-|   |-- Helpers/  (Hilfsklassen)
-|   |   |-- HashGenerator.cs           (Zum Berechnen von Datei-Hashes)
-|   |   |-- PathValidator.cs           (Zur Validierung von Pfaden)
-|   |   |-- MetadataExtractor.cs       (Kapselt Logik zum Extrahieren von Metadaten, z.B. mit TagLib-Sharp)
-|   |   |-- FileSystemWatcherWrapper.cs(Optional: Für die Überwachung von Dateiänderungen)
-|
-|-- ErweiterterDateiOrganisator.Wpf/  (WPF UI-Projekt)
-|   |
-|   |-- App.xaml                       (Globale Anwendungsdefinition, Ressourcen, Start-URI)
-|   |-- App.xaml.cs                    (Code-Behind für App.xaml, Startup-Logik, DI-Container-Setup)
-|   |
-|   |-- Views/  (XAML-Dateien für Fenster und UserControls - die "V" in MVVM)
-|   |   |-- MainView.xaml                (Hauptfenster der Anwendung)
-|   |   |-- MainView.xaml.cs
-|   |   |
-|   |   |-- FileExplorerView.xaml        (UserControl für Dateibrowser-Teil: Adressleiste, Dateiliste)
-|   |   |-- FileExplorerView.xaml.cs
-|   |   |
-|   |   |-- FileListItemView.xaml        (UserControl oder DataTemplate-Definition für ein einzelnes Element in der Dateiliste)
-|   |   |-- FileListItemView.xaml.cs     (Kann leer sein, wenn als DataTemplate in einem ResourceDictionary)
-|   |   |
-|   |   |-- PreviewPaneView.xaml         (UserControl für die Dateivorschau)
-|   |   |-- PreviewPaneView.xaml.cs
-|   |   |
-|   |   |-- TagEditorView.xaml           (UserControl zur Anzeige und Bearbeitung von Tags für ein Element)
-|   |   |-- TagEditorView.xaml.cs
-|   |   |
-|   |   |-- TagManagementView.xaml       (UserControl oder Fenster zur Verwaltung aller Tags)
-|   |   |-- TagManagementView.xaml.cs
-|   |   |
-|   |   |-- SettingsView.xaml            (UserControl oder Fenster für Anwendungseinstellungen)
-|   |   |-- SettingsView.xaml.cs
-|   |   |
-|   |   |-- BatchRenameView.xaml         (UserControl oder Fenster für Massenumbenennung)
-|   |   |-- BatchRenameView.xaml.cs
-|   |   |
-|   |   |-- DuplicateFinderView.xaml     (UserControl oder Fenster für Duplikatssuche)
-|   |   |-- DuplicateFinderView.xaml.cs
-|   |   |
-|   |   |-- ProgressDialogView.xaml      (Fenster zur Anzeige von Fortschritt bei langl. Operationen)
-|   |   |-- ProgressDialogView.xaml.cs
-|   |
-|   |-- ViewModels/  (C#-Klassen - die "VM" in MVVM)
-|   |   |-- ViewModelBase.cs             (Basisklasse, implementiert INotifyPropertyChanged, ggf. von CommunityToolkit.Mvvm.ObservableObject)
-|   |   |-- MainViewModel.cs             (ViewModel für MainView)
-|   |   |-- FileExplorerViewModel.cs     (ViewModel für FileExplorerView)
-|   |   |-- FileListItemViewModel.cs     (ViewModel für ein einzelnes Element in der Dateiliste)
-|   |   |-- PreviewPaneViewModel.cs      (ViewModel für PreviewPaneView)
-|   |   |-- TagEditorViewModel.cs        (ViewModel für TagEditorView)
-|   |   |-- TagManagementViewModel.cs    (ViewModel für TagManagementView)
-|   |   |-- SettingsViewModel.cs         (ViewModel für SettingsView)
-|   |   |-- BatchRenameViewModel.cs      (ViewModel für BatchRenameView)
-|   |   |-- DuplicateFinderViewModel.cs  (ViewModel für DuplicateFinderView)
-|   |   |-- ProgressDialogViewModel.cs   (ViewModel für ProgressDialogView)
-|   |   |-- TagViewModel.cs              (Repräsentiert ein einzelnes Tag im UI-Kontext, z.B. mit Selektionsstatus)
-|   |
-|   |-- Controls/  (Benutzerdefinierte, wiederverwendbare WPF-Steuerelemente, falls komplexer als UserControls)
-|   |   |-- PathBreadcrumbBar.xaml       (Beispiel: Control für Breadcrumb-Navigation)
-|   |   |-- PathBreadcrumbBar.xaml.cs
-|   |   |-- (Weitere Custom Controls bei Bedarf)
-|   |
-|   |-- Converters/  (IValueConverter Implementierungen für Datenbindungen)
-|   |   |-- BooleanToVisibilityConverter.cs
-|   |   |-- FilePathToIconConverter.cs     (Wandelt Dateipfad/Typ in ein Icon um)
-|   |   |-- TagColorToBrushConverter.cs    (Wandelt Hex-Farbcode eines Tags in einen WPF Brush um)
-|   |   |-- FileSizeToStringConverter.cs   (Formatiert Dateigröße lesbar, z.B. in KB, MB)
-|   |   |-- DateTimeToStringConverter.cs   (Formatiert Datum/Zeit)
-|   |   |-- InverseBooleanConverter.cs
-|   |
-|   |-- Resources/  (Resource Dictionaries für Stile, Vorlagen etc.)
-|   |   |-- Styles.xaml                  (Globale Stile für Standard-Controls, Fensterstile)
-|   |   |-- DataTemplates.xaml           (DataTemplates für die Darstellung von Modellen/ViewModels in Listen etc.)
-|   |   |-- Brushes.xaml                 (Zentral definierte Farb-Brushes)
-|   |   |-- Icons.xaml                   (Vektorbasierte Icons als XAML-Ressourcen, z.B. Path-Daten)
-|   |   |-- ConvertersResourceDictionary.xaml (Optional: Zentrales Dictionary zum Referenzieren der Converters)
-|   |
-|   |-- Services/  (UI-spezifische Dienste, die von ViewModels genutzt werden)
-|   |   |-- IDialogService.cs            (Interface zum Anzeigen von Standard-Dialogen oder benutzerdefinierten Dialog-Views)
-|   |   |-- DialogService.cs             (Implementierung von IDialogService)
-|   |   |-- INavigationService.cs        (Optional: Für Navigation zwischen verschiedenen Haupt-Views in einem Single-Window-Setup)
-|   |   |-- NavigationService.cs         (Optional: Implementierung von INavigationService)
-|   |   |-- IClipboardService.cs         (Optional: Interface für Interaktionen mit der Zwischenablage)
-|   |   |-- ClipboardService.cs          (Optional: Implementierung)
-|   |
-|   |-- Behaviors/ (Optional: Für angehängte Verhaltensweisen in XAML, um Code-Behind zu reduzieren)
-|   |   |-- EventToCommandBehavior.cs    (Beispiel: Leitet ein Event an ein Command im ViewModel weiter)
-|   |
-|   |-- Assets/ (Bilder, Schriftarten etc.)
-|   |   |-- Fonts/
-|   |   |-- Images/
-|   |       |-- default_file_icon.png
-|   |       |-- folder_icon.png
-|
-|-- ErweiterterDateiOrganisator.Tests/  (Unit-Test-Projekt)
-|   |
-|   |-- Core.Tests/  (Tests für die Logik im Core-Projekt)
-|   |   |-- FileSystemServiceTests.cs
-|   |   |-- TagServiceTests.cs
-|   |   |-- SearchServiceTests.cs
-|   |   |-- (Weitere Tests für andere Core-Services)
-|   |
-|   |-- Wpf.Tests/  (Tests für die ViewModels des WPF-Projekts)
-|   |   |-- MainViewModelTests.cs
-|   |   |-- FileExplorerViewModelTests.cs
-|   |   |-- (Weitere Tests für andere ViewModels)
-|
-|-- .gitignore                       (Git-Ignore-Datei)
-|-- README.md                        (Projektbeschreibung)
-|-- ErweiterterDateiOrganisator.sln  (Solution-Datei)
+## 🤝 Zusammenspiel der Klassen (MVVM-Magie)
 
-## Zusammenspiel der Klassen (MVVM)
-
-* **App.xaml.cs:** Startet die Anwendung, konfiguriert Dependency Injection (DI), erstellt das `MainViewModel` und setzt es als `DataContext` für die `MainView`. [cite: 88, 89, 90]
-* **Views (XAML):** Definieren die visuelle Struktur. Binden Steuerelemente an Eigenschaften und Commands des zugehörigen ViewModels. [cite: 91, 93] Nutzen `DataTemplates`. [cite: 94]
-* **ViewModels (C#):** Enthalten die Präsentationslogik, implementieren `INotifyPropertyChanged`. [cite: 95, 97] Stellen öffentliche Eigenschaften und `ICommand`-Eigenschaften bereit. [cite: 98] Rufen Services aus dem `.Core`-Projekt auf und nutzen UI-spezifische Services. [cite: 99, 100]
-* **Services (.Core):** UI-unabhängige Geschäftslogik und Datenzugriff. [cite: 101] Werden per DI in ViewModels injiziert. [cite: 101]
-* **Models (.Core):** Reine Datencontainer. [cite: 102]
-* **Converters:** Wandeln Daten für die Anzeige um (z.B. `BooleanToVisibilityConverter`). [cite: 104]
-* **ResourceDictionaries:** Definieren Aussehen und Verhalten (Styles, DataTemplates). [cite: 105, 106, 107]
+* **App.xaml.cs:** 🚀 Startet die Anwendung, mixt den Dependency Injection (DI) Cocktail, schnappt sich das `MainViewModel` und verheiratet es mit der `MainView`.
+* **Views (XAML):** 🎨 Definieren, wie's aussieht. Binden Controls an Eigenschaften & Commands des zugehörigen ViewModels. Nutzen `DataTemplates` für schicke Listen.
+* **ViewModels (C#):** 🧠 Die Strippenzieher! Enthalten die Logik, implementieren `INotifyPropertyChanged`. Stellen öffentliche Eigenschaften & `ICommand`s bereit. Rufen Services aus dem `.Core`-Projekt auf und nutzen UI-spezifische Services.
+* **Services (.Core):** ⚙️ UI-unabhängige Business-Logik und Datenzugriff. Werden per DI in die ViewModels gezaubert.
+* **Models (.Core):** 🧱 Reine Datenbausteine.
+* **Converters:** ↔️ Kleine Übersetzer für die Anzeige (z.B. `BooleanToVisibilityConverter`).
+* **ResourceDictionaries:** 🖌️ Bestimmen Look & Feel (Styles, DataTemplates).
