@@ -91,7 +91,7 @@ ErweiterterDateiOrganisator/
 
 |-- 📦 ErweiterterDateiOrganisator.Core/         (Hier wohnt die Logik & die Datenmodelle)
 
-|      |-- 🧩 Models/                               (FileEntry.cs, Tag.cs, etc.) 
+|   |-- 🧩 Models/                               (FileEntry.cs, Tag.cs, etc.) 
 
 |   |-- ⚙️ Services/                             (IFileSystemService.cs, etc.) 
 
