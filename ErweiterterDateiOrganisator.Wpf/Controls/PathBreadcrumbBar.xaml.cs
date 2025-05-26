@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ErweiterterDateiOrganisator.Wpf
+namespace ErweiterterDateiOrganisator.Wpf.Controls
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class App : ContentPage
+    public partial class PathBreadcrumbBar : ContentPage
     {
-        public App()
+        public PathBreadcrumbBar()
         {
             InitializeComponent();
         }

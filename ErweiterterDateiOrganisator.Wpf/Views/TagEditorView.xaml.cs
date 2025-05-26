@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ErweiterterDateiOrganisator.Wpf
+namespace ErweiterterDateiOrganisator.Wpf.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class App : ContentPage
+    public partial class TagEditorView : ContentView
     {
-        public App()
+        public TagEditorView()
         {
             InitializeComponent();
         }
