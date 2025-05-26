@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ErweiterterDateiOrganisator.Core.DataAccess
 {
-    internal class IRepository
+    interface IRepository
     {
     }
 }

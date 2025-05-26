@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ErweiterterDateiOrganisator.Wpf.Services
 {
-    internal class IDialogService
+    interface IDialogService
     {
     }
 }

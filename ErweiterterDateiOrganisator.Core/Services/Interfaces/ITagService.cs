@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ErweiterterDateiOrganisator.Core.Services
 {
-    internal class ITagService
+    interface ITagService
     {
     }
 }

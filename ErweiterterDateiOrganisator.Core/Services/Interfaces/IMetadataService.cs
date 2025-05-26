@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ErweiterterDateiOrganisator.Core.Services
 {
-    internal class IMetadataService
+    interface IMetadataService
     {
     }
 }
