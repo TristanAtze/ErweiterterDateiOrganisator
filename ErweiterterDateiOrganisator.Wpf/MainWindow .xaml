@@ -1,0 +1,73 @@
+﻿<Window x:Class="ErweiterterDateiOrganisator.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ErweiterterDateiOrganisator.Wpf"
+        xmlns:views="clr-namespace:ErweiterterDateiOrganisator.Wpf.Views"
+        xmlns:viewModels="clr-namespace:ErweiterterDateiOrganisator.Wpf.ViewModels"
+        mc:Ignorable="d"
+        Title="Erweiterter Datei-Organisator" Height="768" Width="1024"
+        DataContext="{Binding MainViewModel, Source={StaticResource ViewModelLocator}}">
+    <Window.Resources>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="_Datei">
+                <MenuItem Header="_Öffnen" Command="{Binding OpenFileCommand}"/>
+                <MenuItem Header="_Einstellungen" Command="{Binding ShowSettingsCommand}"/>
+                <Separator/>
+                <MenuItem Header="_Beenden" Command="{Binding ExitCommand}"/>
+            </MenuItem>
+            <MenuItem Header="_Ansicht">
+            </MenuItem>
+            <MenuItem Header="_Extras">
+                <MenuItem Header="_Duplikate finden" Command="{Binding ShowDuplicateFinderCommand}"/>
+                <MenuItem Header="_Massenumbenennung" Command="{Binding ShowBatchRenameCommand}"/>
+            </MenuItem>
+        </Menu>
+
+        <DockPanel Grid.Row="1">
+            <Border DockPanel.Dock="Left" Width="200" BorderBrush="LightGray" BorderThickness="0,0,1,0">
+                <TextBlock Text="Navigationsbereich (z.B. Favoriten, Tag-Explorer)" Margin="5"/>
+            </Border>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <views:FileExplorerView Grid.Column="0" DataContext="{Binding FileExplorerViewModel}"/>
+
+                <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+                <DockPanel Grid.Column="2">
+                    <views:PreviewPaneView DockPanel.Dock="Top" MinHeight="200" DataContext="{Binding PreviewPaneViewModel}"/>
+                    <views:TagEditorView DockPanel.Dock="Bottom" MinHeight="150" DataContext="{Binding TagEditorViewModel}"/>
+                    <Border Background="AliceBlue">
+                        <TextBlock Text="Metadaten-Details" Margin="5"/>
+                    </Border>
+                </DockPanel>
+            </Grid>
+        </DockPanel>
+
+
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>
+                <TextBlock Text="{Binding StatusText}"/>
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right">
+                <TextBlock Text="Bereit"/>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>
