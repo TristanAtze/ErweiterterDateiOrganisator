@@ -93,91 +93,91 @@ ErweiterterDateiOrganisator/
 
 | -- |-- 🧩 Models/                               (FileEntry.cs, Tag.cs, etc.) 
 
-|   |-- ⚙️ Services/                             (IFileSystemService.cs, etc.) 
+| -- |-- ⚙️ Services/                             (IFileSystemService.cs, etc.) 
 
-|   |-- 🗃️ DataAccess/                           (AppDbContext.cs, etc.) 
+| -- |-- 🗃️ DataAccess/                           (AppDbContext.cs, etc.) 
 
-|   |-- 🛠️ Helpers/                               (HashGenerator.cs, etc.) 
+| -- |-- 🛠️ Helpers/                               (HashGenerator.cs, etc.) 
 
 |
 
 |-- 🖥️ ErweiterterDateiOrganisator.Wpf/          (Das WPF UI-Projekt – hier wird's bunt!)
 
-|   |-- 🚀 App.xaml / App.xaml.cs                (Startrampe der App, DI-Setup)
+| -- |-- 🚀 App.xaml / App.xaml.cs                (Startrampe der App, DI-Setup)
 
-|   |-- 🖼️ Views/                                (XAML-Dateien für Fenster & UserControls)
+| -- |-- 🖼️ Views/                                (XAML-Dateien für Fenster & UserControls)
 
-|   |   |-- 🏠 MainView.xaml                     (Das Hauptquartier)
+| -- | -- |-- 🏠 MainView.xaml                     (Das Hauptquartier)
 
-|   |   |-- ⚙️ SettingsView.xaml                 (Der Einstellungs-Hub)
+| -- | -- |-- ⚙️ SettingsView.xaml                 (Der Einstellungs-Hub)
 
-|   |   |-- 📂 FileExplorerView.xaml             (Die Kommandozentrale für Dateien)
+| -- | -- |-- 📂 FileExplorerView.xaml             (Die Kommandozentrale für Dateien)
 
-|   |   |-- 👁️ PreviewPaneView.xaml              (Das Vorschaufenster)
+| -- | -- |-- 👁️ PreviewPaneView.xaml              (Das Vorschaufenster)
 
-|   |   |-- 🏷️ TagEditorView.xaml                (Der Tag-Manager)
+| -- | -- |-- 🏷️ TagEditorView.xaml                (Der Tag-Manager)
 
-|   |   |-- 📄 FileListItemView.xaml             (Ein einzelner Dateieintrag)
+| -- | -- |-- 📄 FileListItemView.xaml             (Ein einzelner Dateieintrag)
 
-|   |   |-- ... (weitere coole Views)
+| -- | -- |-- ... (weitere coole Views)
 
-|   |
+| -- |
 
-|   |-- 🧠 ViewModels/                           (Die C#-Gehirne der Präsentation)
+| -- |-- 🧠 ViewModels/                           (Die C#-Gehirne der Präsentation)
 
-|   |   |-- 🧬 ViewModelBase.cs                  (Die DNA aller ViewModels mit INotifyPropertyChanged)
+| -- | -- |-- 🧬 ViewModelBase.cs                  (Die DNA aller ViewModels mit INotifyPropertyChanged)
 
-|   |   |-- 👑 MainViewModel.cs
+| -- | -- |-- 👑 MainViewModel.cs
 
-|   |   |-- 🧭 FileExplorerViewModel.cs
+| -- | -- |-- 🧭 FileExplorerViewModel.cs
 
-|   |   |-- ✨ FileListItemViewModel.cs          (ViewModel für jeden Dateieintrag)
+| -- | -- |-- ✨ FileListItemViewModel.cs          (ViewModel für jeden Dateieintrag)
 
-|   |   |-- 🖼️ PreviewPaneViewModel.cs
+| -- | -- |-- 🖼️ PreviewPaneViewModel.cs
 
-|   |   |-- 🏷️ TagEditorViewModel.cs
+| -- | -- |-- 🏷️ TagEditorViewModel.cs
 
-|   |   |-- ... (weitere schlaue ViewModels)
+| -- | -- |-- ... (weitere schlaue ViewModels)
 
-|   |
+| -- |
 
-|   |-- 🎨 Controls/                             (Optionale Custom WPF Controls)
+| -- |-- 🎨 Controls/                             (Optionale Custom WPF Controls)
 
-|   |   |-- 🗺️ PathBreadcrumbBar.cs
+| -- | -- |-- 🗺️ PathBreadcrumbBar.cs
 
-|   |
+| -- |
 
-|   |-- 🔄 Converters/                           (IValueConverter – die kleinen Helferlein)
+| -- |-- 🔄 Converters/                           (IValueConverter – die kleinen Helferlein)
 
-|   |   |-- 🌈 TagColorToBrushConverter.cs
+| -- | -- |-- 🌈 TagColorToBrushConverter.cs
 
-|   |   |-- ...
+| -- | -- |-- ...
 
-|   |
+| -- |
 
-|   |-- 📚 Resources/                            (Resource Dictionaries – Schatztruhen für Styles)
+| -- |-- 📚 Resources/                            (Resource Dictionaries – Schatztruhen für Styles)
 
-|   |   |-- 🖌️ Styles.xaml                       (Globale & spezifische Control-Styles)
+| -- | -- |-- 🖌️ Styles.xaml                       (Globale & spezifische Control-Styles)
 
-|   |   |-- 📝 DataTemplates.xaml                (Wie deine Daten aussehen sollen)
+| -- | -- |-- 📝 DataTemplates.xaml                (Wie deine Daten aussehen sollen)
 
-|   |   |-- ...
+| -- | -- |-- ...
 
-|   |
+| -- |
 
-|   |-- 🛎️ Services/ (UI-spezifische Dienste)
+| -- |-- 🛎️ Services/ (UI-spezifische Dienste)
 
-|   |   |-- 💬 IDialogService.cs / DialogService.cs (Für Dialoge vom ViewModel aus)
+| -- | -- |-- 💬 IDialogService.cs / DialogService.cs (Für Dialoge vom ViewModel aus)
 
-|   |   |-- ...
+| -- | -- |-- ...
 
 |
 
 |-- ✅ ErweiterterDateiOrganisator.Tests/        (Unit-Test-Projekt – damit alles rund läuft!)
 
-|   |-- 🧪 Core.Tests/                           (Tests für die Core-Services)
+| -- |-- 🧪 Core.Tests/                           (Tests für die Core-Services)
 
-|   |-- 🧪 Wpf.Tests/                             (Tests für die ViewModels)
+| -- |-- 🧪 Wpf.Tests/                             (Tests für die ViewModels)
 
 |
 
